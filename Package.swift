@@ -14,14 +14,14 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/ivalx1s/darwin-relux.git", .upToNextMajor(from: "8.0.1")),
+        .package(url: "https://github.com/relux-works/swift-relux.git", .upToNextMajor(from: "8.0.1")),
         .package(url: "https://github.com/AppsFlyerSDK/AppsFlyerFramework-Dynamic", .upToNextMajor(from: "6.15.0")),
     ],
     targets: [
         .target(
             name: "ReluxAppsFlyer",
             dependencies: [
-                .product(name: "Relux", package: "darwin-relux"),
+                .product(name: "Relux", package: "swift-relux"),
                 .product(name: "AppsFlyerLib-Dynamic", package: "AppsFlyerFramework-Dynamic"),
             ],
             path: "Sources"
